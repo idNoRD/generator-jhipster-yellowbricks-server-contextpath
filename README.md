@@ -1,76 +1,70 @@
 # generator-jhipster-yellowbricks-spring-boot-contextpath
 
-## Change target:
-
-- File: https://github.com/jhipster/generator-jhipster/blob/main/generators/spring-boot/templates/src/main/resources/config/application.yml.ejs
-- Generator: https://github.com/jhipster/generator-jhipster/tree/main/generators/spring-boot
-- Purpose: Configure context-path
-
-## For example
-
-Assume the context-path is "/jh"
-So `src/main/resources/config/application.yml` will be
-
-```diff
-server:
-  servlet:
-+   context-path: /jh/
-    session:
-      cookie:
-        http-only: true
-```
-
-> JHipster blueprint, yellowbricks-spring-boot-contextpath blueprint for JHipster
+A [JHipster](https://www.jhipster.tech/) blueprint that sets `server.servlet.context-path` in `application.yml` to a configurable context path.
 
 [![NPM version][npm-image]][npm-url]
 [![Generator][github-generator-image]][github-generator-url]
-[![Samples][github-samples-image]][github-samples-url]
+![GitHub Maintained](https://img.shields.io/maintenance/yes/2026)
 
-# Introduction
+## What it does
 
-This is a [JHipster](https://www.jhipster.tech/) blueprint, that is meant to be used in a JHipster application.
+Patches `src/main/resources/config/application.yml` during generation to insert `context-path` as the first key in `server.servlet`:
 
-# Prerequisites
+```diff
+ server:
+   servlet:
++    context-path: /jh/
+     session:
+       cookie:
+         http-only: true
+```
 
-As this is a [JHipster](https://www.jhipster.tech/) blueprint, we expect you have JHipster basic knowledge:
+The value is configurable — any context path can be used.
 
-- [JHipster](https://www.jhipster.tech/)
+## Prerequisites
 
-# Installation
+- Node.js `^22.18.0 || >=24.11.0`
+- JHipster 9
 
-To install or update this blueprint:
+## Installation
 
 ```bash
 npm install -g generator-jhipster-yellowbricks-spring-boot-contextpath
 ```
 
-# Usage
+## Usage
 
-To use this blueprint, run the below command
+Create a `.yo-rc.json` in your project directory with the desired context path:
 
-````bash
-jhipster-yellowbricks-spring-boot-contextpath
+```json
+{
+  "generator-jhipster-yellowbricks-spring-boot-contextpath": {
+    "contextPath": "/jh/"
+  }
+}
+```
 
-You can look for updated yellowbricks-spring-boot-contextpath blueprint specific options by running
+Then run JHipster with this blueprint:
 
 ```bash
-jhipster-yellowbricks-spring-boot-contextpath app --help
-````
+# Standard generator
+jhipster --blueprints yellowbricks-spring-boot-contextpath
 
-And looking for `(blueprint option: yellowbricks-spring-boot-contextpath)` like
+# With JDL
+jhipster import-jdl your-app.jdl --blueprints yellowbricks-spring-boot-contextpath
+```
+
+Replace `/jh/` with your actual context path. The trailing slash is required.
 
 ## Pre-release
 
-To use an unreleased version, install it using git.
+To use the latest unreleased version directly from GitHub:
 
 ```bash
-npm install -g jhipster/generator-jhipster-yellowbricks-spring-boot-contextpath#main
-jhipster --blueprints yellowbricks-spring-boot-contextpath --skip-jhipster-dependencies
+npm install -g idNoRD/generator-jhipster-yellowbricks-spring-boot-contextpath#main
 ```
 
 [npm-image]: https://img.shields.io/npm/v/generator-jhipster-yellowbricks-spring-boot-contextpath.svg
 [npm-url]: https://npmjs.org/package/generator-jhipster-yellowbricks-spring-boot-contextpath
-[github-generator-image]: https://github.com/jhipster/generator-jhipster-yellowbricks-spring-boot-contextpath/actions/workflows/generator.yml/badge.svg
-[github-generator-url]: https://github.com/jhipster/generator-jhipster-yellowbricks-spring-boot-contextpath/actions/workflows/generator.yml
-[github-samples-image]: https://github.com/jhipster/generator-jhipster-yellowbricks-spring-boot-contextpath/actions/workflows/samples.yml/badge.svg
-[github-samples-url]: https://github.com/jhipster/generator-jhipster-yellowbricks-spring-boot-contextpath/actions/workflows/samples.yml
+[github-generator-image]: https://github.com/idNoRD/generator-jhipster-yellowbricks-spring-boot-contextpath/actions/workflows/generator.yml/badge.svg
+[github-generator-url]: https://github.com/idNoRD/generator-jhipster-yellowbricks-spring-boot-contextpath/actions/workflows/generator.yml

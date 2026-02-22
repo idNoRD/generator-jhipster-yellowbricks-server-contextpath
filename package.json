@@ -1,10 +1,19 @@
 {
   "name": "generator-jhipster-yellowbricks-spring-boot-contextpath",
+  "version": "1.0.0",
+  "description": "JHipster blueprint to configure Spring Boot application context-path",
   "keywords": [
     "yeoman-generator",
     "jhipster-blueprint",
-    "jhipster-8"
+    "jhipster-9",
+    "generator-jhipster-yellowbricks"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idNoRD/generator-jhipster-yellowbricks-spring-boot-contextpath.git"
+  },
+  "license": "MIT",
+  "author": "idNoRD",
   "bin": {
     "jhipster-yellowbricks-spring-boot-contextpath": "cli/cli.cjs"
   },
@@ -31,6 +40,12 @@
     "generator-jhipster": "9.0.0-beta.3"
   },
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/exec": "^7.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
+    "@semantic-release/npm": "^13.1.4",
+    "@semantic-release/release-notes-generator": "^14.1.0",
     "ejs-lint": "2.0.1",
     "eslint": "9.39.2",
     "eslint-config-prettier": "10.1.8",
@@ -41,6 +56,7 @@
     "lint-staged": "16.2.7",
     "prettier": "3.8.1",
     "prettier-plugin-packagejson": "3.0.0",
+    "semantic-release": "^25.0.3",
     "vitest": "4.0.18",
     "yeoman-test": ">=10"
   },
