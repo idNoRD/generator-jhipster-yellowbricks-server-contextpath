@@ -61,14 +61,6 @@ jhipster import-jdl your-app.jdl --blueprints yellowbricks-spring-boot-contextpa
 
 Replace `/jh/` with your actual context path. The trailing slash is required.
 
-## Pre-release
-
-To use the latest unreleased version directly from GitHub:
-
-```bash
-npm install -g idNoRD/generator-jhipster-yellowbricks-spring-boot-contextpath#main
-```
-
 [npm-image]: https://img.shields.io/npm/v/generator-jhipster-yellowbricks-spring-boot-contextpath.svg
 [npm-url]: https://npmjs.org/package/generator-jhipster-yellowbricks-spring-boot-contextpath
 [github-generator-image]: https://github.com/idNoRD/generator-jhipster-yellowbricks-spring-boot-contextpath/actions/workflows/generator.yml/badge.svg
