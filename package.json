@@ -1,6 +1,6 @@
 {
   "name": "generator-jhipster-yellowbricks-spring-boot-contextpath",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "JHipster blueprint to configure Spring Boot application context-path",
   "keywords": [
     "yeoman-generator",
